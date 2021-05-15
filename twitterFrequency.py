@@ -75,7 +75,6 @@ def save_histogram(hist, filename):
 ## PART 4 ##
 def get_top(hist, N):
     # return a list of the N most frequent words in hist
-    N = 128
     stopwords = []
     for word, count in sorted(hist.items(), key=lambda pair: pair[1], reverse=True):
         if len(stopwords) < N:
@@ -92,7 +91,7 @@ def filter(hist, stop):
 def main():
     file1 = open(sys.argv[1], encoding="utf-8")
     (wordf1, lenf1) = get_freqs(file1)
-    stopwords = get_top(wordf1, 0)
+    stopwords = get_top(wordf1, 128)
     save_histogram(wordf1, sys.argv[1])
 
     for fn in sys.argv[2:]:
