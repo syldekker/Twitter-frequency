@@ -1,6 +1,6 @@
 # Twitter-frequency
 
-Processes raw Twitter data:
+Processes raw Twitter data (tweets):
 * tokenization
 * frequency distribution analysis
 * basic topic modeling
